@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con un Valor</title>
+    <title>Página de Valor</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,26 +16,31 @@
         }
         #valor {
             font-size: 2em;
-            margin-bottom: 20px;
-        }
-        input {
-            padding: 10px;
-            font-size: 1em;
         }
     </style>
 </head>
 <body>
 
-    <div id="valor">Valor Actual. Intentaré cambiarlo con API: 0</div>
-    <input type="number" id="nuevoValor" placeholder="Ingresa un nuevo valor">
-    <button onclick="cambiarValor()">Cambiar Valor</button>
+    <div id="valor">Cargando valor...</div>
 
     <script>
-        function cambiarValor() {
-            const nuevoValor = document.getElementById('nuevoValor').value;
-            document.getElementById('valor').innerText = 'Valor Actual: ' + nuevoValor;
-            document.getElementById('nuevoValor').value = ''; // Limpiar el campo de entrada
+        // Función para leer el archivo JSON
+        async function leerValor() {
+            try {
+                const respuesta = await fetch('datos.json');
+                if (!respuesta.ok) {
+                    throw new Error('No se pudo leer el archivo JSON');
+                }
+                const datos = await respuesta.json();
+                document.getElementById('valor').innerText = 'Valor Actual: ' + datos.valor;
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('valor').innerText = 'Error al cargar el valor';
+            }
         }
+
+        // Llamar a la función para cargar el valor al cargar la página
+        leerValor();
     </script>
 
 </body>
