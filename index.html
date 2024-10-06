@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<!-- en la sección head está lo que NO PODRÁ ver el usuario de la página HTML
+		en la sección body estará l aque si-->
+		<title> Aquí nombre pestaña Navegador</title>
+		<link rel="icon" href="indalo.png"> <!-- mini-icono asociado a la pestaña del navegador.-->
+				
+		<!--meta es la etiqueta para METADATOS. Y va en la sección del head, y no tienen "cierre"-->
+		<meta charset="utf-8"> <!-- para cambiar el tipo de codificación de caracteres-->
+		<meta name="keywords" content="palabra 1, palabra 2, etc."> <!-- para recopilar palabras clave para el SEO-->
+		<meta name="description" content="Esta pagina está creada para agrupar enlaces a previsiones meteo"> <!--para describir la página para qué fin es-->
+		<meta name="author" content="Fulanito de tal"> <!-- para indicar el autor de la página-->
+		<meta name="copyright" content="EMPRESA X"> <!-- para indicar la empresa dueña de los derechos de esta página-->
+		<meta name="robots" content="index ó noindex"> <!-- para indicar si la página debe ser indexada o no indexada. robots es generica para todos. Si quiero que sea para uno concreto (p.ej. Googlebot lo pondría-->
+		<meta name="robots" content="follow ó unfollow "> <!-- para permitir al rastreador si los enlaces dentro de la página pueden ser seguidos o no-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--mejora la visibilidad en moviles etc.--> 
+	</head>
+			
+	<body>
+		<header> <!--area de encabezado de la página-->
+			<nav><!-- area para la navegacion por la página-->
+				<ul><!-- Inicio de listado, ya que es razonable pensar que la navgación se sirva de un listado de sitios a los que navegar-->
+					<li><a href="http://www.google.com">Primer link</a></li>
+					<li><a href="http://www.aemet.com">Segundo  link</a></li>
+					<li><a href="http://www.wikipedia.com">Tercer link</a></li>
+					<li><a href="#formulario">IR A FINAL FORMULARIO  DE PÁGINA</a></li>
+
+				</ul>
+			</nav>
+		</header>
+		<hr><!-- Mete una línea (puede ser útil para separar secciones)-->
+		
+		<article>
+			<section>
+				<h1>
+					Esta etiqueta tipo h1 está dentro de una subsección SECTION de un  ARTICLE
+				</h1>
+				<h2>
+					Esta etiqueta tipo h2 está dentro de una subsección SECTION de un  ARTICLE
+				</h2>
+				<p>
+					Bla, bla bla del párrafo
+				</p>
+			</section>
+		</article>
+		<aside><!-- El asid es para añadir un articulo al lado (a-side). En HTML puro aparecería abajo, pero con CSS se podrá dejar al lado-->
+			<h2>
+				Contenido extra a un lado
+			</h2>
+			<p>
+				Y he aquí el contenido extra
+			</p>
+		</aside>
+		
+		<table border="4px"> <!-- en HTML no merece mucho la pena. Lo suyo es no usar herramientas estética, y hacerlo luego con CSS-->
+			<tr><!-- tr para definir el contenido de cada fila y td para definir cada campo-->
+				
+				<td><center><b>N</b></center></td>	<!-- el center tambén merece la pena abandonarlo hasta mejorar la `página con HTML-->
+				<td><center><b>Ap</b></center></td>	
+				<td><center><b>Tlf</b></center></td>	
+
+			</tr>
+			
+			<tr>
+				<td>Fulano</td>	
+				<td>Mengano</td>	
+				<td>555555</td>	
+			</tr>
+			<tr>
+				<td>Otro N</td>	
+				<td>Otro A</td>	
+				<td>666666</td>	
+			</tr>	
+		</table>	
+		<center>
+			<img width="150px" height="100px" src="C:\Users\Alex RZP\Desktop\BODA\FULL ESTRELLA\Sep Formentera\20210921_194211.jpg" title="Texto al pasar raton" alt="Texto si not found">	
+		</center>
+		
+
+
+		<hr>
+		<footer>
+			<h4>
+				Esta sería la sección de footer. Por ejemplo, "Todos los derechos reservados" o "XXX 2.021""
+			</h4>
+			<p>
+				Siguenos en nuestros <b>colaboradores:</b>
+			</p>
+			<a href="GOOGLE">Google</a>
+			<a href="">Instagram</a>
+			<a href="">Facebook</a>		
+			<address><!-- bien podría ser un tipo <p>. Por defecto la hoja de estilo de los navegadores muyestran esta etiqueta en cursiva-->
+				Página diseñada por: Alex <br>
+				Correo-e: aaa@.com
+			</address>			
+		</footer>
+		<hr>
+
+		<h1>Hello                                     World etiqueta tipo h1</h1><!--a o ser que se use <pre></pre>, se ignoran spacios y tabuladores-->
+		<h2>Hello World etiqueta tipo h2</h2>
+		<h3>Hello World etiqueta tipo h3</h3>
+		<h4>Hello World etiqueta tipo h4</h4>
+		<h5>Hello World etiqueta tipo h5</h5>
+		<h6>Hello World etiqueta tipo h6</h6>
+		<p>
+			Lorem ipsum blabla.
+			Y más blaba bla. <br><br> Y más en otra línea
+		</p>
+		<b>Negrita</b>
+		<strong>¿Otra negrita?</strong>
+		<i>Italica</i>
+		<em>¿Otra itálica?</em>
+		<strike>Tachado</strike>
+		<small>Pequeña</small>
+		<a target="_BLANK" href="https://en.wikipedia.org/wiki/ISO_11784_and_ISO_11785">Clickar aquí</a><!-- target="_BLANK" obliga a abrir en nueva pestaña-->
+		<br>				
+		<br>
+		<h1>Listados</h1>
+		<ul>
+				<li>Cosa 1</li>
+				<li>Cosa 2</li>
+				<li>Cosa 3</li>
+				<li>Cosa 4</li>
+		</ul>
+		<ol> <!--lo mismo pero ordenado-->
+				<li>Cosa 1</li>
+				<li>Cosa 2</li>
+				<li>Cosa 3</li>
+				<li>Cosa 4</li>
+		</ol>
+		<br>
+		<br>
+		<h1>Visualizar Imagenes y Videos</h1>
+		<p> Pongo la <b>imagen</b></p>
+		<img width="300px" height="200px" src="C:\Users\Alex RZP\Desktop\BODA\FULL ESTRELLA\Sep Formentera\20210921_194211.jpg">	
+		<p> Pongo el <b>video</b></p>
+		<video width="300px" src="C:\Users\Alex RZP\Downloads\eMule\Incoming\Cumple nena - 20200423_150115.mp4" controls=""></video>
+		<p> Pongo el <b>Audio</b></p><audio width="300px" src="https://orangefreesounds.com/wp-content/uploads/2018/01/Stuka-siren-sound.mp3" controls></audio>
+		<br>
+		<br>
+		<div>
+			<p>Prueba etiqueta <b>div</b> para separar contenidos </p>
+		</div>
+		<br>
+		<br>
+		<h1 id="formulario">Formularios</h1>
+		<form>
+			<input type="text"		name="" value="etiqueta tipo text" required="">
+			<input type="password" 	name="" value="etiqueta tipo password">
+			<input type="number" 	name="" value="etiqueta tipo number">
+			<input type="color"		name="" value="">
+			<input type="email" 	name="" value="etiqueta tipo correo-e">
+			<br>
+			<input type="range" 	name="" min="10" max="500" value="etiqueta tipo rango">
+			<input type="date" 		name="" value="eqtiqueta tipo date">
+			<input type="time" 		name="" value="etiqueta tipo hora">
+			<input type="button" 	name="" value="Texto Button">
+			<input type="submit" 	name="" value="Texto Submit">
+
+			<!--En el tipo submit, si no fijo el texto, el navegador pondrá "Enviar" por defecto, en el idioma del navegador de turno.  -->
+			<!-- el atributo requiered="", para cualquiera de los tipos de input, indica que es un elemento necesario paa poder enviar el formulario-->
+			<!--en la etiqueta form se puede indicar entre otros el atributo method, que puede ser 'get' (por defecto) o si no hay que indicar el 'post'.-->
+
+			<textarea readonly=""></textarea>
+			<!--También  especie de input aunque un poco especial. Es caja con texto normal y puedo cambiar el tamaño.
+			Si añado atributo readonlypasa a ser una caja que puedo modificar de tamaño, pero con texto fijo tocar texto-->
+		</form>
+ 	</body>
+
+</html>
