@@ -1,0 +1,30 @@
+const express = require('express');
+const fs = require('fs');
+const app = express();
+
+app.use(express.json());
+
+app.post('/update-json', (req, res) => {
+    const newData = req.body;
+
+    fs.readFile('datos.json', 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error al leer el archivo');
+        }
+
+        let jsonData = JSON.parse(data);
+        Object.assign(jsonData, newData);
+
+        fs.writeFile('datos.json', JSON.stringify(jsonData, null, 4), (err) => {
+            if (err) {
+                return res.status(500).send('Error al guardar el archivo');
+            }
+
+            res.send('Archivo actualizado correctamente');
+        });
+    });
+});
+
+app.listen(3000, () => {
+    console.log('Servidor corriendo en puerto 3000');
+});
